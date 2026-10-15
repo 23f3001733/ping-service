@@ -8,7 +8,7 @@ from fastapi.responses import JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 
 # ---------- CHANGE THESE TWO ----------
-EMAIL = "your.email@example.com"                       # your logged-in email
+EMAIL = "23f3001733@ds.study.iitm.ac.in"                       # your logged-in email
 EXAM_ORIGIN = "https://PUT-EXAM-PAGE-ORIGIN-HERE"      # see note below
 
 # ---------- Already set for you ----------
