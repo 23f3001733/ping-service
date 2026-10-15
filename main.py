@@ -7,11 +7,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 
-# ---------- CHANGE THESE TWO ----------
-EMAIL = "23f3001733@ds.study.iitm.ac.in"                       # your logged-in email
-EXAM_ORIGIN = "https://PUT-EXAM-PAGE-ORIGIN-HERE"      # see note below
-
-# ---------- Already set for you ----------
+EMAIL = "23f3001733@ds.study.iitm.ac.in"
+EXAM_ORIGIN = "https://exam.sanand.workers.dev"
 MY_ORIGIN = "https://app-x02zy1.example.com"
 RATE_LIMIT = 15
 WINDOW = 10
@@ -54,6 +51,6 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[MY_ORIGIN, EXAM_ORIGIN],
     allow_methods=["GET", "OPTIONS"],
-    allow_headers=["X-Request-ID", "X-Client-Id", "Content-Type"],
+    allow_headers=["*"],
     expose_headers=["X-Request-ID"],
 )
